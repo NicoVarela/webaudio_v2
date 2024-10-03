@@ -1,0 +1,113 @@
+html,
+body {
+  height: 100%;
+   background-color: #0f234e; 
+
+ 
+}
+
+body {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: stretch; */
+  background: linear-gradient(to bottom, #020210, #0f234e);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  height: 100vh;
+}
+
+header,
+footer {
+  flex: 0 0 auto;
+}
+
+img {
+  width: 150px; /* Define a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-left: 50px; /* Espaço entre a imagem e o texto ao lado */
+}
+
+main {
+  text-align: center;
+  padding: 5vmin;
+  flex: 1 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  color: grey;
+}
+
+.profile {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+form {
+  margin-top: 50px;
+}
+
+.img-principal {
+  width: auto; /* Faz a imagem ocupar 100% da largura do container */
+  max-height: 500px;  
+   height: auto;   
+
+ 
+}
+
+#destaque{
+
+  background-color: rgb(5, 5, 5);
+  color:rgb(122, 163, 228);
+  border-radius: 15px;
+}
+
+.feedback-input {
+  color: rgb(15, 5, 5);
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #3586ff;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 60%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #06090d;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: #0c264e;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type="submit"]:hover {
+  background: #5c5e60;
+}

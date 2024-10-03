@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra Lateral</title>
+    <style>
+       
+        
+        .sidebar {
+            height: 100%;
+            width: 150px;
+            position:fixed;
+            top: 15%;
+            left: 0;
+            background-color: #111;
+            padding-top: 20px;
+            font-family: Arial, sans-serif;
+            font-size:xx-small ;
+        }
+
+        .sidebar a, .sidebar button {
+            padding: 15px 10px;
+            text-align: left;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+            border: none;
+            background: none;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .sidebar a:hover, .sidebar button:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 10px;
+            text-align: center;
+            /* height:200%; */
+            /* width: 250px; */
+        }
+
+        .sidebar button {
+            background-color: transparent;
+            border: none;
+            text-align: left;
+            color: white;
+            font-size: 18px;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/">Home</a>
+        <button onclick="navigate('/text_speech')">Text to Audio</button>
+        <button onclick="navigate('/audio-para-audio')">Audio to Audio</button>
+        <button onclick="navigate('/trilhas-efeitos')">Bg & Fx</button>
+        <button onclick="navigate('/mixer')">Mixer</button>
+       
+    </div>
+    
+    <!-- Main content -->
+   
+    <div class="content" style="margin-left: 200px;">
+        <!-- <h1 style="color: rgb(84, 79, 131);text-align: left;">PRODUÇÃO DE ÁUDIO PARA PROPAGANDA</h1> -->
+       
+        <!-- <p>Escolha uma das opções da barra ao lado.</p>  -->
+       
+    </div> 
+
+    <script>
+        function navigate(link) {
+            window.location.href = link;
+        }
+    </script>
+</body>
+</html>

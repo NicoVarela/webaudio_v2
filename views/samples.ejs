@@ -1,0 +1,252 @@
+<%-include("partials/header.ejs")  %>
+<main>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Amostras de Áudio</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                background-color:  #0f234e;
+                color: #333;
+                font-size: 18px;
+            }
+
+            .img-principal {
+             width: auto; /* Faz a imagem ocupar 100% da largura do container */
+             max-height: 500px;  
+              height: auto;   
+          
+            
+    }
+    
+            .section-header {
+                text-align: center;
+                margin: 20px 0;
+            }
+            h3{
+                color: chocolate;
+            }
+
+            h2{
+                color:rgb(186, 220, 250);
+            }
+    
+            .audio-container {
+                margin: 20px 0;
+            }
+    
+            .audio-track {
+                position: relative;
+                margin: 10px 0;
+                background-color: rgb(13, 17, 49);
+                padding: 10px;
+                
+                border-radius: 20px ;
+                color: rgb(12, 10, 10);
+            }
+    
+            .audio-track .play-btn {
+                background-color: #153844;
+                border: none;
+                color: white;
+                padding: 8px 12px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+    
+            .audio-track .play-btn:hover {
+                background-color: #0a252d;
+            }
+    
+            .audio-track .progress-bar {
+                width: 100%;
+                height: 5px;
+                background-color: #333;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+    
+            .audio-track .progress {
+                height: 5px;
+                background-color: white;
+                border-radius: 5px;
+                width: 0;
+            }
+    
+            .audio-track figcaption {
+                text-align: center;
+                margin-top: 5px;
+                color:#706f6f
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="container">
+        <!-- Imagem Principal -->
+        <div class="text-center my-5 imagem1">
+            <h3>Amostras de jingles, spots, projetos musicais, áudio para Livros e outros.</h3>
+            <img src="images/capa1.jpg" alt="Imagem Principal" class="img-principal img-fluid">
+        </div>
+    
+        <!-- Seção Jingle -->
+        <div class="section-header">
+            <h2>J i n g l e</h2>
+            
+        </div>
+        <div class="audio-container">
+            <!-- Amostras de Áudio -->
+            <figure class="audio-track">
+                <button class="play-btn" id="btn0">Play</button>
+                <div class="progress-bar" id="prbar0">
+                    <div class="progress" id="pro0"></div>
+                </div>
+                <figcaption>Nico Varela participou na produção de mais de 3000 jingles, ouça uma pequena amostra.</figcaption>
+            </figure>
+            <!-- Repita o bloco de amostra de áudio para outros áudios -->
+        </div>
+    
+        <!-- Seção Spot -->
+        <div class="section-header">
+            <h2>S p o t</h2>
+           
+        </div>
+        <div class="audio-container">
+            <!-- Amostras de Áudio -->
+            <figure class="audio-track">
+                <button class="play-btn" id="btn1">Play</button>
+                <div class="progress-bar" id="prbar1">
+                    <div class="progress" id="pro1"></div>
+                </div>
+                <figcaption>Spots com as vozes mais renomadas do Sul do Brasil</figcaption>
+            </figure>
+            <!-- Repita o bloco de amostra de áudio para outros áudios -->
+        </div>
+    
+        <!-- Seção Produção Musical -->
+        <div class="section-header">
+            <h2>Produção Musical</h2>
+       
+        </div>
+        <div class="audio-container">
+            <!-- Amostras de Áudio -->
+            <figure class="audio-track" >
+                <button class="play-btn" id="btn2">Play</button>
+                <div class="progress-bar" id="prbar2">
+                    <div class="progress" id="pro2"></div>
+                </div>
+                <figcaption> Vinil, CD, DVD, Teatro, audio para Livros. </figcaption>
+            </figure>
+            <!-- Repita o bloco de amostra de áudio para outros áudios -->
+        </div>
+    
+        <!-- Seção Áudio para Livros -->
+        <div class="section-header">
+            <h2>Jingles Candidatos - Eleições 2024</h2>
+       
+        </div>
+        <div class="audio-container">
+            <!-- Amostras de Áudio -->
+            <figure class="audio-track">
+                <button class="play-btn" id="btn3">Play</button>
+                <div class="progress-bar" id="prbar3">
+                    <div class="progress" id="pro3"></div>
+                </div>
+                <figcaption>Todos os Candidatos são fictícios - Powered by IA</figcaption>
+            </figure>
+            <!-- Repita o bloco de amostra de áudio para outros áudios -->
+        </div>
+    
+        <!-- Seção Acessibilidade -->
+        <div class="section-header">
+            <h2>A c e s s i b i l i d a d e</h2>
+          
+        </div>
+        <div class="audio-container">
+            <!-- Amostras de Áudio -->
+            <figure class="audio-track">
+                <button class="play-btn" id="btn4">Play</button>
+                <div class="progress-bar" id="prbar4">
+                    <div class="progress" id="pro4"></div>
+                </div>
+                <figcaption>Todos os roteiros são fictícios - Powered by IA</figcaption>
+            </figure>
+            <!-- Repita o bloco de amostra de áudio para outros áudios -->
+        </div>
+    
+        <!-- Seção Áudio-Visual -->
+        <!-- <div class="section-header">
+            <h2>Á u d i o - V i s u a l</h2>
+       
+        </div>
+        <div class="audio-container">
+           
+            <figure class="audio-track">
+                <button class="play-btn" id="btn5">Play</button>
+                <div class="progress-bar" id="prbar5">
+                    <div class="progress" id="pro5"></div>
+                </div>
+                <figcaption>Áudio-Visual 1</figcaption>
+            </figure>
+           
+        </div> -->
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script para controlar a reprodução dos áudios
+        const audioElements = document.querySelectorAll('.audio-track');
+        let currentAudio = null;
+        var i = 0;
+        audioElements.forEach(track => {
+            console.log(track);
+            const playButton = track.querySelector(`#btn${i}`);
+            const progressBar = track.querySelector(`#pro${i}`);
+            const audio = new Audio(`audios/audio${i}.mp3`);
+            
+            playButton.addEventListener('click', () => {
+                if (currentAudio && currentAudio !== audio) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                    const currentProgress = document.querySelector('.progress-playing');
+                    if (currentProgress) {
+                        currentProgress.classList.remove('progress-playing');
+                        currentProgress.style.width = '0';
+                    }
+                }
+    
+                if (audio.paused) {
+                    audio.play();
+                    playButton.textContent = 'Stop';
+                    currentAudio = audio;
+                } else {
+                    audio.pause();
+                    audio.currentTime = 0;
+                    playButton.textContent = 'Play';
+                    progressBar.style.width = '0';
+                    currentAudio = null;
+                }
+    
+                audio.ontimeupdate = () => {
+                    progressBar.style.width = (audio.currentTime / audio.duration) * 100 + '%';
+                    progressBar.classList.add('progress-playing');
+                };
+    
+                audio.onended = () => {
+                    playButton.textContent = 'Play';
+                    progressBar.style.width = '0';
+                    currentAudio = null;
+                };
+            });
+            i=i+1;
+            if (i == 6){i=0} ;
+        });
+    </script>
+    
+    </body>
+
+</main>
+<%-include("partials/footer.ejs")  %>

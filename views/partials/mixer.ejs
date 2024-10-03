@@ -1,0 +1,54 @@
+
+
+
+<main >
+    <script src="https://unpkg.com/wavesurfer-multitrack/dist/multitrack.min.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/envelope.min.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.min.js"></script>
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+
+    
+    <section class="container-fluid row" id="editSpot"><h3 style="color :rgb(185, 225, 249); ">EDIT - MIX CONSOLE</h3>
+    
+      <input type="file" id="fileInput" hidden accept="audio/*">
+
+      
+      <div class= "col-md-2 " style= "border: solid; background-color: rgb(26, 26, 43);">
+  
+        <button class="btn btn-outline-success btn-block" style="margin: 50% 0 15%;" id="play">Play</button>
+        <button class= "btn btn-outline-info btn-block"  style="margin-bottom: 15%;" id="forward">Fwrd 30s</button>
+        <button  class= "btn btn-outline-info btn-block"  style="margin: 5% 0 10%;" id="backward">Back 30s</button>
+        <label style="color:aquamarine">
+          Zoom: <input type="range" min="10" max="100" value="10" style="transform: scale(50%);color:aquamarine" />
+        </label>
+       
+        <div style="background-color: rgb(4, 3, 3);  width: 100%;">
+           <h4 style="color:rgb(111, 109, 144); margin:40% 0 10%;  ">Mixdown</h4>
+           <button  class= "btn btn-outline-danger" style="margin: 5% 0 10%;"  id="rec">MIX</button>
+           <button  class= "btn btn-outline-success" style="margin: 5% 0 10%;"  id="playmix">PLAY</button>
+           <button  class= "btn btn-outline-warning" style="margin: 5% 0 10%; "  id="download">Download</button>
+           <audio id="mix"  style= "margin-top: 10px; width: 150px; transform: scale(0.80); transform-origin: 0 0;" type="audio/mp3"></audio> 
+        </div>
+        
+        <!-- <div id="list_audios"></div> -->
+      </div>
+    <div class="col-sm-2 row container-fluid">
+     <% for (let i = 0; i < 5; i++) {%> 
+      <div style="border-style: solid ; border-color:  black;">
+      <button class="btn btn-outline-secondary btn-block w-100" id = "ld<%- i %>"  >Load File<%- i+1 %></button>
+      <audio  style= "transform: scale(0.60); transform-origin: 0 0;"  id="audio<%- i %>">audio<%- i+1 %></audio> 
+      <button class="btn btn-primary mutes btn-block w-100" value="<%- i %>" style="background-color:rgb(33, 28, 95) " id = "mute<%- i %>"  >Mute <%- i+1 %></button>
+      <button class="btn btn-primary solos btn-block w-100" value="<%- i %>" style="background-color:rgb(25, 24, 36) " id = "solo<%- i %>"  >Solo <%- i+1 %></button>
+      </div>
+      <% }  %> 
+     
+  
+    </div>
+     <div class="col-sm-8" id="mixer" style="background: #0f234e; color: #fff; border-color: black; border-style: solid;">WAVEFORMS</div>
+    </section>
+
+
+   
+    <script type="module" src="js/mixer.js"></script>
+
